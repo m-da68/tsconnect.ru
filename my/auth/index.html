@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../../images/icon.ico" type="image/x-icon">
+    <title>Авторизация | TSConnect</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <div class="outer">
+        <div class="middle">
+            <div class="inner container" id="page-1">
+                <form action="https://controlbase.tsconnect.ru/api/v1/index.php" id="login-form" method="post">
+                    <div class="header">
+                        <span class="header-text">Авторизация</span>
+                        <input type="hidden" value="account" name="group">
+                        <input type="hidden" value="login" name="method">
+                        <input type="hidden" value="https://controlbase.tsconnect.ru/my" name="redirect_url">
+                        <input type="hidden" value="cookie" name="mode">
+                    </div>
+                    <div class="form-inputs">
+                        <div class="form-input-box">
+                            <div class="label-input-box">
+                                <label class="label-input" for="email">Email</label>
+                            </div>
+                            <div class="input-box">
+                                <input type="email" class="form-input" id="email" name="email" placeholder="Например, team@tsconnect.ru" required>
+                            </div>
+                        </div>
+                        <div class="form-input-box">
+                            <div class="label-input-box">
+                                <label class="label-input" for="password">Пароль</label>
+                            </div>
+                            <div class="input-box">
+                                <input type="password" class="form-input" id="password" name="password" placeholder="Ваш пароль" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-input-box">
+                        <div class="alert-box">
+                            <span class="alert-text" id="alert-msg"></span>
+                        </div>
+                    </div>
+                    <div id="buttons-box">
+                        <section id="buttons-section-2">
+                            <div class="button-box" style="text-align: right;">
+                                <button type="button" id="btn-login" onclick="login()">Войти</button>
+                            </div>
+                            <div class="button-box" style="text-align: left;">
+                                <button type="button" id="btn-showRegister" onclick="showRegister()">Регистрация</button>
+                            </div>
+                        </section>
+                    </div>
+                </form>
+            </div>
+            <div class="inner container" id="page-2" hidden>
+                <form action="https://controlbase.tsconnect.ru/api/v1/index.php" method="post">
+                    <div class="header">
+                        <span class="header-text">Регистрация</span>
+                        <input type="hidden" value="account" name="group">
+                        <input type="hidden" value="register" name="method">
+                        <input type="hidden" value="https://controlbase.tsconnect.ru/my/auth" name="redirect_url">
+                        <input type="hidden" value="cookie" name="mode">
+                    </div>
+                    <div class="form-inputs" style="margin-bottom: 8px;">
+                        <div class="form-input-box">
+                            <div class="label-input-box">
+                                <label class="label-input" for="email">Имя</label>
+                            </div>
+                            <div class="input-box">
+                                <input type="text" class="form-input" id="name" name="name" placeholder="Например, Дмитрий" required>
+                            </div>
+                        </div>
+                        <div class="form-input-box">
+                            <div class="label-input-box">
+                                <label class="label-input" for="email-reg">Email</label>
+                            </div>
+                            <div class="input-box">
+                                <input type="email" class="form-input" id="email-reg" name="email" placeholder="Например, team@tsconnect.ru" required>
+                            </div>
+                        </div>
+                        <div class="form-input-box">
+                            <div class="label-input-box">
+                                <label class="label-input" for="password-reg">Пароль</label>
+                            </div>
+                            <div class="input-box">
+                                <input type="password" class="form-input" id="password-reg" name="password" placeholder="Ваш пароль" required>
+                            </div>
+                        </div>
+                        <div class="form-input-box">
+                            <div class="alert-box">
+                                <span class="alert-text">Нажимая на кнопку «Зарегистрироваться»,<br> вы соглашаетесь на обработку персональных данных</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="buttons-box">
+                        <section id="buttons-section-2">
+                            <div class="button-box" style="text-align: right;">
+                                <button type="submit" id="btn-register" onclick="register()">Зарегистрироваться</button>
+                            </div>
+                            <div class="button-box" style="text-align: left;">
+                                <button type="button" id="btn-showAuth" onclick="showAuth()">Авторизация</button>
+                            </div>
+                        </section>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

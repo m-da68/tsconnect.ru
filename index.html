@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/icon.ico" type="image/x-icon">
+    <title>TSConnect | Цифровое решение</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <div class="outer">
+        <div class="middle">
+            <div class="inner container" id="page-1">
+                <div class="header">
+                    <div class="logo"></div>
+                    <!-- <span class="header-text">ControlBase<br><span id="header-text-style-1" class="header-text">переводи данные в цифру</span></span> -->
+                </div>
+                <div id="buttons-box">
+                    <section id="buttons-section-2">
+                        <div class="button-box" style="text-align: right;">
+                            <button id="btn-lk" onclick="redirect('my/auth')">Вход</button>
+                        </div>
+                        <div class="button-box" style="text-align: left;">
+                            <button id="btn-software" onclick="document.location='oferta.pdf'">Оферта</button>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div class="inner container" id="page-2" hidden>
+                <div class="header">
+                    <span class="header-text">Software</span>
+                </div>
+                <div class="software-products">
+                    <div class="software-product">
+                        <div class="header-software">
+                            <span class="header-software-text">Web-версия</span>
+                        </div>
+                        <div class="buttons-box software">
+                            <section id="buttons-section">
+                                <div class="button-box">
+                                    <button id="btn-next" onclick="redirect('https://controlbase.tsconnect.ru/my')">Перейти</button>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                    <div class="software-product">
+                        <div class="header-software">
+                            <span class="header-software-text">Для компьютера</span>
+                        </div>
+                        <div class="buttons-box software">
+                            <section id="buttons-section-2">
+                                <div class="button-box" style="text-align: right;">
+                                    <button id="btn-next" onclick="download('https://controlbase.tsconnect.ru/download/controlbase_win_installer.exe')">Скачать для Windows</button>
+                                </div>
+                                <div class="button-box" style="text-align: left;">
+                                    <button id="btn-next" onclick="download('https://controlbase.tsconnect.ru/download/controlbase_pc_portable.zip')">Скачать Portable</button>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                    <div class="software-product">
+                        <div class="header-software">
+                            <span class="header-software-text">Для смартфона</span>
+                        </div>
+                        <div class="buttons-box software">
+                            <section id="buttons-section">
+                                <div class="button-box">
+                                    <button id="btn-next" onclick="alert('К сожалению, за такой короткий срок - 2 дня - физически не возможно реализовтаь столь глобальный проект на всех платформах. Понравилась работа и вы хотите пригласить нас в свой проект, пишите нам team@tsconnect.ru!')">Скачать</button>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                    <div class="software-product">
+                        <div class="header-software">
+                            <span class="header-software-text">Документация API</span>
+                        </div>
+                        <div class="buttons-box software">
+                            <section id="buttons-section">
+                                <div class="button-box">
+                                    <button id="btn-next" onclick="redirect('https://controlbase.tsconnect.ru/download/apidocumentation.pdf')">Перейти</button>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

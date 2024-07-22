@@ -1,0 +1,229 @@
+@font-face {
+    font-family:"Nominee";
+    src: url("../fonts/Nominee-Black.otf"), url("../fonts/Nominee-Black.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family:"Nominee";
+    src: url("../fonts/Nominee-Bold.otf"), url("../fonts/Nominee-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: bold;
+}
+
+@font-face {
+    font-family:"Peace-Sans";
+    src: url("../fonts/peace_sans.otf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    background-color: #ff5050;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.04);
+    animation: showContentBox 1s;
+}
+
+@keyframes showContentBox {
+
+    from {
+        filter: blur(6px);
+    }
+    
+    to {
+        filter: blur(0px);
+    }
+}
+
+@keyframes showContentBox2 {
+
+    from {
+        filter: blur(4px);
+    }
+    
+    to {
+        filter: blur(0px);
+    }
+}
+
+span, h1 {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+
+    user-select: none;
+}
+
+input:focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
+textarea:focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
+select:focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
+option:focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
+select::-ms-expand {
+    display: none; 
+}
+
+.outer {
+    display: table;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.middle {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.inner {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.logo {
+    margin: auto;
+    width: 500px;
+    height: 100px;
+    background: url("logo.png") no-repeat center;
+    background-size: contain;
+}
+
+#page-2 {
+    animation: showContentBox .4s;
+}
+
+.header, .header-software {
+    text-align: center;
+}
+
+.header-text {
+    color: white;
+    font-family: "Peace-Sans";
+    font-size: 45px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 1.16px;
+    text-align: center;
+}
+
+#header-text-style-1 {
+    font-family: "Nominee";
+    font-size: 35px;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+#buttons-box {
+    margin-top: 30px;
+    width: 100%;
+}
+
+#buttons-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+}
+
+#buttons-section-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    text-align: center;
+}
+
+.button-box, .software-products {
+    width: 100%;
+}
+
+button {
+    background-color: white;
+    border: none;
+    border-radius: 8px;
+    width: 30%;
+    padding: 8px;
+    font-family: "Calibri";
+    font-weight: bold;
+    cursor: pointer;
+    min-width: 145px;
+    max-width: 170px;
+    animation: showButton 2s;
+    transition: outline .1s;
+    transition: color .1s;
+    transition: background-color .6s linear;
+}
+
+button:hover {
+    background-color: rgb(255, 80, 80);
+    outline: solid white 2px;
+    color: white;
+}
+
+@keyframes showButton {
+
+    from {
+        width: 2%;
+        padding: 2px
+        
+        ;
+    }
+    
+    to {
+        width: 30%;
+        padding: 8px;
+    }
+}
+
+.software-products {
+    margin-top: 20px;
+}
+
+.software-product {
+    width: 100%;
+    margin: 20px 0;
+}
+
+.header-software-text {
+    font-family: "Nominee";
+    font-size: 25px;
+    color: white;
+}
+
+.buttons-box.software {
+    margin-top: 10px;
+}
