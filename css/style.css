@@ -123,7 +123,11 @@ select::-ms-expand {
     animation: showContentBox .4s;
 }
 
-.header, .header-software {
+#page-3 {
+    animation: showContentBox .4s;
+}
+
+.header, .header-software, .header-market {
     text-align: center;
 }
 
@@ -150,8 +154,9 @@ select::-ms-expand {
 }
 
 #buttons-box {
-    margin-top: 30px;
-    width: 100%;
+    margin: auto;
+    margin-top: 60px;
+    width: fit-content;
 }
 
 #buttons-section {
@@ -167,7 +172,14 @@ select::-ms-expand {
     text-align: center;
 }
 
-.button-box, .software-products {
+#buttons-section-4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    text-align: center;
+}
+
+.button-box, .software-products, .market-products {
     width: 100%;
 }
 
@@ -181,7 +193,7 @@ button {
     font-weight: bold;
     cursor: pointer;
     min-width: 145px;
-    max-width: 170px;
+    max-width: 200px;
     animation: showButton 2s;
     transition: outline .1s;
     transition: color .1s;
@@ -209,16 +221,16 @@ button:hover {
     }
 }
 
-.software-products {
+.software-products, .market-products {
     margin-top: 20px;
 }
 
-.software-product {
+.software-product, .market-products {
     width: 100%;
     margin: 20px 0;
 }
 
-.header-software-text {
+.header-software-text, .header-market-text {
     font-family: "Nominee";
     font-size: 25px;
     color: white;
@@ -226,4 +238,18 @@ button:hover {
 
 .buttons-box.software {
     margin-top: 10px;
+}
+
+.market-product {
+    width: 60%;
+    margin: auto;
+    padding: 20px;
+    text-align: left;
+    border: 2px white solid;
+    border-radius: 20px;
+}
+
+.header-market {
+    text-align: left;
+    margin-bottom: 10px;
 }

@@ -19,19 +19,25 @@
                     <!-- <span class="header-text">ControlBase<br><span id="header-text-style-1" class="header-text">переводи данные в цифру</span></span> -->
                 </div>
                 <div id="buttons-box">
-                    <section id="buttons-section-2">
-                        <div class="button-box" style="text-align: right;">
+                    <section id="buttons-section-4">
+                        <div class="button-box">
                             <button id="btn-lk" onclick="redirect('my/auth')">Вход</button>
                         </div>
-                        <div class="button-box" style="text-align: left;">
-                            <button id="btn-software" onclick="document.location='oferta.pdf'">Оферта</button>
+                        <div class="button-box">
+                            <button id="btn-software" onclick="software()">Продукты</button>
+                        </div>
+                        <div class="button-box">
+                            <button id="btn-software" onclick="buy()">Магазин</button>
+                        </div>
+                        <div class="button-box">
+                            <button id="btn-software" onclick="about()">О нас</button>
                         </div>
                     </section>
                 </div>
             </div>
             <div class="inner container" id="page-2" hidden>
                 <div class="header">
-                    <span class="header-text">Software</span>
+                    <span class="header-text" onclick="main()">Продукты</span>
                 </div>
                 <div class="software-products">
                     <div class="software-product">
@@ -41,7 +47,7 @@
                         <div class="buttons-box software">
                             <section id="buttons-section">
                                 <div class="button-box">
-                                    <button id="btn-next" onclick="redirect('https://controlbase.tsconnect.ru/my')">Перейти</button>
+                                    <button id="btn-next" disabled style="cursor: not-allowed;" onclick="redirect('https://controlbase.tsconnect.ru/my')">Перейти</button>
                                 </div>
                             </section>
                         </div>
@@ -53,10 +59,10 @@
                         <div class="buttons-box software">
                             <section id="buttons-section-2">
                                 <div class="button-box" style="text-align: right;">
-                                    <button id="btn-next" onclick="download('https://controlbase.tsconnect.ru/download/controlbase_win_installer.exe')">Скачать для Windows</button>
+                                    <button id="btn-next" onclick="download('https://tsconnect.ru/download/controlbase_win_installer.exe')">Скачать для Windows</button>
                                 </div>
                                 <div class="button-box" style="text-align: left;">
-                                    <button id="btn-next" onclick="download('https://controlbase.tsconnect.ru/download/controlbase_pc_portable.zip')">Скачать Portable</button>
+                                    <button id="btn-next" onclick="download('https://tsconnect.ru/download/controlbase_pc_portable.zip')">Скачать Portable</button>
                                 </div>
                             </section>
                         </div>
@@ -68,7 +74,7 @@
                         <div class="buttons-box software">
                             <section id="buttons-section">
                                 <div class="button-box">
-                                    <button id="btn-next" onclick="alert('К сожалению, за такой короткий срок - 2 дня - физически не возможно реализовтаь столь глобальный проект на всех платформах. Понравилась работа и вы хотите пригласить нас в свой проект, пишите нам team@tsconnect.ru!')">Скачать</button>
+                                    <button id="btn-next" disabled style="cursor: not-allowed;">Скачать</button>
                                 </div>
                             </section>
                         </div>
@@ -80,7 +86,67 @@
                         <div class="buttons-box software">
                             <section id="buttons-section">
                                 <div class="button-box">
-                                    <button id="btn-next" onclick="redirect('https://controlbase.tsconnect.ru/download/apidocumentation.pdf')">Перейти</button>
+                                    <button id="btn-next" disabled style="cursor: not-allowed;" onclick="redirect('https://controlbase.tsconnect.ru/download/apidocumentation.pdf')">Перейти</button>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="inner container" id="page-3" hidden>
+                <div class="header">
+                    <span class="header-text" onclick="main()">Магазин</span>
+                </div>
+                <div class="market-products">
+                    <div class="market-product">
+                        <div class="header-market">
+                            <span class="header-market-text">Ежемесячная подписка TS TaskMan</span><span class="header-market-text" style="float: right;">100 руб/мес</span>
+                        </div>
+                        <div class="buttons-box market">
+                            <div class="button-box">
+                                <button id="btn-next" style="cursor: not-allowed;" onclick="">Купить</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="inner container" id="page-4" hidden>
+                <div class="header">
+                    <span class="header-text" onclick="main()">О нас</span>
+                </div>
+                <div class="market-products">
+                    <div class="market-product">
+                        <div class="header-market">
+                            <span class="header-market-text">Порядок предоставления услуг и возврат<br><br></span>
+                        </div>
+                        <div class="header-market">
+                            <span class="header-market-text" style="font-size: 15px;">Привелегия подписки предоставляется только после оплаты и может быть ограничена периодом, указанном в описании конкретного товара.<br><br>Частичный возврат денюжных средств возможен в случае, если срок действия подписки не истек. Заявка и способ возврата рассматривается технической поддержкой.<br>Возврат денюжных средств в полном объеме возможен, только если в услугах сервиса есть существенные недостатки. Например, сервис недоступен потехническим причинам.</span>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="market-product">
+                        <div class="header-market">
+                            <span class="header-market-text">Юридическая информация и контакты<br><br></span>
+                        </div>
+                        <div class="header-market">
+                            <span class="header-market-text" style="font-size: 15px;">Самозанятый Гусев Дмитрий Михайлович<br>ИНН: 681204545844<br>г. Тамбов
+                                <br><br><a href="mailto:team@tsconnect.ru" style="color: white;">team@tsconnect.ru</a><br><a href="https://t.me/ben_lad_en" style="color: white;">t.me/ben_lad_en</a></span>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="market-product">
+                        <div class="header-market">
+                            <span class="header-market-text">Пользовательское соглашение и оферта<br><br></span>
+                        </div>
+                        <div id="buttons-box" style="margin-top: 0;">
+                            <section id="buttons-section-2">
+                                <div class="button-box">
+                                    <button id="btn-software" style="width: 200px; min-width: 200px;" onclick="document.location='privacy.pdf'">Пользовательское соглашение</button>
+                                </div>
+                                <div class="button-box">
+                                    <button id="btn-software" onclick="document.location='oferta.pdf'">Оферта</button>
                                 </div>
                             </section>
                         </div>
